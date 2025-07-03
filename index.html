@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT support satisfaction survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title">IT support satisfaction survey</h1>
+  <p id="description">Please take a few minutes to evaluate our support service</p>
+
+  <form id="survey-form" method="POST" action="#">
+    <label for="name" id="name-label">Name</label>
+    <input id="name" type="text" placeholder="Name" required>
+    
+    <label for="email" id="email-label">Pro Email</label>
+    <input id="email" type="email" placeholder="Pro email" required>
+    
+    <label for="number" id="number-label">Employee number</label>
+    <input id="number" type="number" placeholder="Employee number" min="0" max="99999">
+    
+    <label for="dropdown">Department</label>
+    <select id="dropdown" name="department" required>
+      <option value="" disabled selected>-- Select your department --</option>
+      <option value="administration">Administration</option>
+      <option value="finance">Finance / Accounting</option>
+      <option value="hr">Human Resources</option>
+      <option value="it">IT</option>
+      <option value="sales">Sales</option>
+      <option value="other">Other</option>
+    </select>
+
+    <fieldset>
+      <legend>How would you rate your overall experience with the technical support team?</legend>
+      <label><input type="radio" name="experience" value="excellent" required>Excellent</label>
+      <label><input type="radio" name="experience" value="good">Good</label>
+      <label><input type="radio" name="experience" value="neutral">Neutral</label>
+      <label><input type="radio" name="experience" value="poor">Poor</label>
+      <label><input type="radio" name="experience" value="very-poor">Very poor</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>How fast was the technical support?</legend>
+      <label><input type="radio" name="response-time" value="very-fast" required>Very fast</label>
+      <label><input type="radio" name="response-time" value="fast">Fast</label>
+      <label><input type="radio" name="response-time" value="average">Average</label>
+      <label><input type="radio" name="response-time" value="slow">Slow</label>
+      <label><input type="radio" name="response-time" value="very-slow">Very slow</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Which aspects of the service would you like to be improved?</legend>
+      <label><input type="checkbox" name="improvements" value="hardware">Hardware support</label>
+      <label><input type="checkbox" name="improvements" value="software">Software support</label>
+      <label><input type="checkbox" name="improvements" value="network">Network maintenance</label>
+      <label><input type="checkbox" name="improvements" value="training">User training</label>
+      <label><input type="checkbox" name="improvements" value="communication">Communication with support</label>
+      <label><input type="checkbox" name="improvements" value="none">None</label>
+    </fieldset>
+
+  <label for="comments">Additional comments?</label>
+  <textarea id="comments" name="comments" rows="3" cols="37" placeholder="Describe the issue or suggest improvements"></textarea>
+  <button type="submit" id="submit">Submit</button>
+  </form>
+</body>
+</html>
